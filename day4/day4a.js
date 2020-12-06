@@ -18,9 +18,6 @@ fs.readFile('input.txt', 'utf8', function (err, data) {
 
     let lstPassports = data.split(/\r?\n\n/);
     lstPassports = lstPassports.map(x => {
-        /*
-
-        */
         let reBirth = /byr\:(?<birthYear>[^\s\n]+)/.exec(x);
         let reIsssue = /iyr\:(?<issueYear>[^\s\n]+)/.exec(x);
         let reExpire = /eyr\:(?<expireYear>[^\s\n]+)/.exec(x);
